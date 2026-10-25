@@ -6,7 +6,7 @@
 Pipeline CI/CD complet pour une petite application **Express / TypeScript** : vérification automatique avec **GitHub Actions**, déploiement sur **Render** uniquement si la CI réussit, protection de `main` par un **ruleset** et déploiements de prévisualisation pour les pull requests.
 
 - **Dépôt GitHub :** <https://github.com/nawreszr/cicd-lab>
-- **Production (Render) :** <https://VOTRE-SERVICE.onrender.com>
+- **Production (Render) :** <https://cicd-lab-g5j3.onrender.com>
 
 ## Sommaire
 
