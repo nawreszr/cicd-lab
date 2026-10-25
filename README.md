@@ -100,6 +100,10 @@ Service web Node créé depuis le dépôt GitHub, branche `main`, instance gratu
 | Health Check Path | `/api/health` |
 | Auto-Deploy | On Commit (modifié plus tard, voir section 5) |
 
+![Premier déploiement Render](captures/render-first-deploy.png)
+
+![Réponse de /api/health](captures/render-api-health.png)
+
 ---
 
 ## 4. Intégration continue avec GitHub Actions
@@ -163,11 +167,15 @@ git pull --ff-only
 git branch -d feature/github-actions-ci
 ```
 
+![Job Verify réussi dans les logs GitHub Actions](captures/actions-verify-pass.png)
+
 ---
 
 ## 5. Déployer seulement si la CI réussit
 
 Dans Render, le réglage **Auto-Deploy** passe de *On Commit* à **After CI Checks Pass**. Ainsi, un push sur `main` ne déploie que si la CI de ce commit est verte.
+
+![Render : Auto-Deploy sur After CI Checks Pass](captures/render-auto-deploy.png)
 
 ---
 
@@ -186,6 +194,8 @@ Dans Render, le réglage **Auto-Deploy** passe de *On Commit* à **After CI Chec
 | Bypass list | Vide |
 
 Le workflow *produit* les résultats ; le ruleset les *impose*.
+
+![Ruleset Protect main avec le check Verify obligatoire](captures/ruleset-protect-main.png)
 
 ---
 
